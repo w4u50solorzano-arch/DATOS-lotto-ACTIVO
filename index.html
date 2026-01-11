@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATOS lotto ACTIVO Rewards - Panel Élite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://sad.adsgram.ai/js/adsgram-ad-sdk.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-pulse-slow { animation: pulse-slow 3s infinite ease-in-out; }
+        
+        @keyframes float-up-fade {
+            0% { transform: translateY(0) scale(1); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(-60px) scale(1.5); opacity: 0; }
+        }
+        .animate-float-up { animation: float-up-fade 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        
+        @keyframes number-pop {
+            0% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.25); filter: brightness(1.5) drop-shadow(0 0 10px rgba(99, 102, 241, 0.8)); }
+            100% { transform: scale(1); filter: brightness(1); }
+        }
+        .animate-number-pop { animation: number-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        
+        @keyframes success-pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .animate-success-pop { animation: success-pop 0.4s ease-out; }
+        
+        @keyframes beam {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        .animate-beam { position: relative; overflow: hidden; }
+        .animate-beam::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: beam 2s infinite;
+        }
+        .rayo-glow { filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6)); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.475.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Punto de entrada principal para React -->
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>

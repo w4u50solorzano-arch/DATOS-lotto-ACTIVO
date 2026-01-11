@@ -1,0 +1,8 @@
+{
+  "name": "DATOS lotto ACTIVO Rewards",
+  "description": "Plataforma de recompensas de alto rendimiento para obtener datos y predicciones de lotería mediante tareas y anuncios.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
